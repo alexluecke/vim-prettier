@@ -1,11 +1,11 @@
 ## vim-prettier [![Travis CI Build Status](https://travis-ci.org/prettier/vim-prettier.svg?branch=master)](https://travis-ci.org/prettier/vim-prettier) [![Discord](https://img.shields.io/discord/435481502113857536.svg)](https://discord.gg/9bWM9PH)
 
-A vim plugin wrapper for prettier, pre-configured with custom default prettier
-settings.
+A vim plugin wrapper for prettier, pre-configured with custom default prettier settings.
 
 ---
 
-**Note:** We are currently working towards a major release on branch `release/1.x`, while under development bugfixes will be applied to master branch and then ported back to `release/1.x` branch.
+**Note:** We are currently working towards a major release on branch `release/1.x`, while under development bugfixes will be applied to
+master branch and then ported back to `release/1.x` branch.
 
 If you have feature request and/or suggestions please comment on issue [1.0 release](https://github.com/prettier/vim-prettier/issues/126)
 
@@ -35,16 +35,14 @@ Plug 'prettier/vim-prettier', {
 
 ---
 
-By default it will auto format **javascript**, **typescript**, **less**,
-**scss**, **css**, **json**, **graphql** and **markdown** files if they
-have/support the "@format" pragma annotation in the header of the file.
+By default it will auto format **javascript**, **typescript**, **less**, **scss**, **css**, **json**, **graphql** and **markdown** files if
+they have/support the "@format" pragma annotation in the header of the file.
 
 ![vim-prettier](/media/vim-prettier.gif?raw=true 'vim-prettier')
 
 ### INSTALL
 
-Install with [vim-plug](https://github.com/junegunn/vim-plug), assumes node and
-yarn|npm installed globally.
+Install with [vim-plug](https://github.com/junegunn/vim-plug), assumes node and yarn|npm installed globally.
 
 ```vim
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -67,14 +65,12 @@ cd ~/.vim/bundle
 git clone https://github.com/prettier/vim-prettier
 ```
 
-If using other vim plugin managers or doing manual setup make sure to have
-`prettier` installed globally or go to your vim-prettier directory and either do
-`npm install` or `yarn install`
+If using other vim plugin managers or doing manual setup make sure to have `prettier` installed globally or go to your vim-prettier
+directory and either do `npm install` or `yarn install`
 
 ### Prettier Executable resolution
 
-When installed via vim-plug, a default prettier executable is installed inside
-vim-prettier.
+When installed via vim-plug, a default prettier executable is installed inside vim-prettier.
 
 vim-prettier executable resolution:
 
@@ -165,8 +161,8 @@ By default we auto focus on the quickfix when there are errors but can also be d
 let g:prettier#quickfix_auto_focus = 0
 ```
 
-To enable vim-prettier to run in files without requiring the "@format" doc tag.
-First disable the default autoformat, then update to your own custom behaviour
+To enable vim-prettier to run in files without requiring the "@format" doc tag. First disable the default autoformat, then update to your
+own custom behaviour
 
 Running before saving sync:
 
@@ -194,8 +190,7 @@ autocmd BufWritePre,TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.
 
 ### Overwrite default prettier configuration
 
-**Note:** vim-prettier default settings differ from prettier intentionally.
-However they can be configured by:
+**Note:** vim-prettier default settings differ from prettier intentionally. However they can be configured by:
 
 ```vim
 " max line length that prettier will wrap on
@@ -237,9 +232,6 @@ let g:prettier#config#trailing_comma = 'all'
 " flow|babylon|typescript|css|less|scss|json|graphql|markdown
 " Prettier default: babylon
 let g:prettier#config#parser = 'flow'
-
-" cli-override|file-override|prefer-file
-let g:prettier#config#config_precedence = 'prefer-file'
 
 " always|never|preserve
 let g:prettier#config#prose_wrap = 'preserve'

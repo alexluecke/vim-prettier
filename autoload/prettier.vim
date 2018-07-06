@@ -320,8 +320,6 @@ function! s:Get_Prettier_Exec_Args(config) abort
           \ get(a:config, 'trailingComma', g:prettier#config#trailing_comma) .
           \ ' --parser ' .
           \ get(a:config, 'parser', g:prettier#config#parser) .
-          \ ' --config-precedence ' .
-          \ get(a:config, 'configPrecedence', g:prettier#config#config_precedence) .
           \ ' --prose-wrap ' .
           \ get(a:config, 'proseWrap', g:prettier#config#prose_wrap) .
           \ ' --html-whitespace-sensitivity ' .
